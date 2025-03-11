@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./blogs.css";
+import "./Blogs.css";
 
 const blogPosts = [
   {
