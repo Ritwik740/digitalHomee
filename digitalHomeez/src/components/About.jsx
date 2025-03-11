@@ -11,7 +11,7 @@ const About = () => {
       {/* Founders Section */}
       <div className="founders">
         <div className="founder">
-          <img src="images/alvina.jpg" alt="Siddharth Mishra" className="founder-img"/>
+          <img src="images/siddharth.jpg" alt="Siddharth Mishra" className="founder-img"/>
           <h3>Siddharth Mishra</h3>
           <p>
             A seasoned digital marketing expert with over <strong>12 years of experience</strong>, Siddharth has helped <strong>100+ businesses</strong>
