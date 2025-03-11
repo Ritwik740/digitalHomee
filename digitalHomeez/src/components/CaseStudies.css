@@ -1,0 +1,141 @@
+/* Case Studies Section */
+.case-studies {
+    text-align: center;
+    padding: 100px 10%;
+    background-color: #111; /* Dark background color for the section */
+    color: white;
+    position: relative;
+}
+
+/* Main Container */
+.case-studies-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px; /* Increased height to fit larger circles */
+}
+
+
+/* Central Case Study Box */
+.central-circle {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, rgba(211, 211, 211, 0.4), rgba(255, 255, 255, 0.4)); /* More faded grey to white */
+    border-radius: 20px; /* Rounded edges for the box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    font-weight: bold; /* Bold text */
+    color: white; /* White text for better contrast */
+    text-align: center;
+    padding: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    z-index: 10;
+}
+
+
+/* Small Boxes (Petals) - Translucent with Black Fade */
+.case-study-card {
+    width: 160px;
+    height: 160px;
+    background: rgba(0, 0, 0, 0.5); /* Translucent black background */
+    border-radius: 20px; /* Rounded edges */
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: bold; /* Bold text */
+    text-align: center;
+    padding: 12px;
+    color: white;
+    transition: transform 0.8s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Remove bullets from lists inside case-study-card */
+.case-study-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.case-study-card li {
+    margin: 5px 0;
+}
+
+/* Arrange Petals in a Perfect Circle Using Trigonometry */
+.case-study-card:nth-child(1) {
+    transform: rotate(0deg) translateY(-250px) rotate(0deg);
+}
+.case-study-card:nth-child(2) {
+    transform: rotate(45deg) translateY(-250px) rotate(-45deg);
+}
+.case-study-card:nth-child(3) {
+    transform: rotate(90deg) translateY(-250px) rotate(-90deg);
+}
+.case-study-card:nth-child(4) {
+    transform: rotate(135deg) translateY(-250px) rotate(-135deg);
+}
+.case-study-card:nth-child(5) {
+    transform: rotate(180deg) translateY(-250px) rotate(-180deg);
+}
+.case-study-card:nth-child(6) {
+    transform: rotate(225deg) translateY(-250px) rotate(-225deg);
+}
+.case-study-card:nth-child(7) {
+    transform: rotate(270deg) translateY(-250px) rotate(-270deg);
+}
+.case-study-card:nth-child(8) {
+    transform: rotate(315deg) translateY(-250px) rotate(-315deg);
+}
+
+/* On Hover (Desktop) - Expand Petals */
+.case-studies-container:hover .case-study-card {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Mobile Behavior - Click to Expand */
+.case-studies-container.active .case-study-card {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .case-studies {
+        padding: 50px 5%;
+    }
+
+    /* Adjust circle size and positioning for mobile */
+    .central-circle {
+        width: 150px;
+        height: 150px;
+        font-size: 1.3rem;
+    }
+
+    .case-study-card {
+        width: 120px;
+        height: 120px;
+        padding: 10px;
+        font-size: 0.8rem;
+        border-radius: 12px; /* Adjusted for mobile round-edged squares */
+    }
+
+    .case-studies-container {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .case-study-card {
+        position: relative;
+        margin: 15px;
+    }
+}
